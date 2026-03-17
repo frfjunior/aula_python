@@ -9,7 +9,7 @@ resultado_impar = primeiro_numero + segundo_numero
 
 if resto_divisao == 0:
     pass
-elif resto_divisao  2 == 0:
+elif resto_divisao // 2 == 0:
     print(f"O resultado da multiplicação é: {resultado_par}")
 else:
     print(f"O resultado da soma é: {resultado_impar}")

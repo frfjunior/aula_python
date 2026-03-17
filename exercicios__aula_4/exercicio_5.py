@@ -1,13 +1,22 @@
-previsao_tempo = input("Digite a previsão do tempo (sol, chuva ou nublado): ")
+opcoes_validas = ["sol", "chuva", "nublado"]
 
-def previsao_tempo_funcao(previsao):
+previsao_mensagem = input("Digite a previsão do tempo (sol, chuva ou nublado): ").lower()
+
+def validar_previsao(previsao):
+    while previsao not in opcoes_validas:
+        print("Opção inválida. Tente novamente.")
+        previsao = input("Digite a previsão do tempo (sol, chuva ou nublado): ").lower()
+    return previsao
+
+
+def mostrar_mensagem(previsao):
     if previsao == "sol":
         print("Não esqueça o filtro solar")
     elif previsao == "chuva":
-        print("Use guarda chuvas")
+        print("Use guarda-chuva")
     elif previsao == "nublado":
-        print("O tempo esta ótimo")
-    else:
-        print("Opção Inválida")
+        print("O tempo está ótimo")
 
-previsao_tempo_funcao(previsao_tempo)
+
+previsao = validar_previsao(previsao_mensagem)
+mostrar_mensagem(previsao)
