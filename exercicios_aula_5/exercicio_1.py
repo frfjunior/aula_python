@@ -1,5 +1,9 @@
-a = ['Maria', 'tinha', 'um', 'carneirinho']
+vogais = ['a', 'e', 'i', 'o', 'u']
 
+frase = "Lingua inglesa interessante"
 
-for i in range(len(a)):
-    print(i, a[i])
+contar_vogais = 0
+for letra in frase:
+    if letra.lower() in vogais:
+        contar_vogais += 1
+print(f"A frase contém {contar_vogais} vogais.")
